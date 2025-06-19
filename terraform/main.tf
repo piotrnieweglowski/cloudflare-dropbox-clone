@@ -76,8 +76,8 @@ output "r2_bucket_name" {
   value = cloudflare_r2_bucket.dropbox_clone.name
 }
 
-output "d1_database_name" {
-  value = cloudflare_d1_database.dropbox_clone_meta.name
+output "d1_database_id" {
+  value = cloudflare_d1_database.dropbox_clone_meta.id
 }
 
 output "worker_dev_url" {
