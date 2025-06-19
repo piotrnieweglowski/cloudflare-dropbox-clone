@@ -1,0 +1,38 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "dropbox-clone",
+	"main": "src/worker.js",
+	"compatibility_date": "2025-06-19",
+	"observability": {
+		"enabled": true
+	},
+	// Bindings
+	"d1_databases": [
+		{
+		"binding": "DB",
+		"database_name": "dropbox-clone-meta",
+		"database_id": "REPLACE_WITH_YOUR_DB_ID"
+		}
+	],
+	"kv_namespaces": [
+		{
+		"binding": "RATE_LIMIT",
+		"id": "REPLACE_WITH_YOUR_KV_NAMESPACE_ID" 
+		}
+	],
+	"r2_buckets": [
+		{
+		"binding": "FILES",
+		"bucket_name": "dropbox-clone-bucket"
+		}
+	],
+
+	// Environment variables
+	"vars": {
+		"MAX_UPLOAD_SIZE": "10485760"
+	}
+}
