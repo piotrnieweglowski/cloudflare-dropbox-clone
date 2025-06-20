@@ -81,6 +81,6 @@ output "d1_database_id" {
 }
 
 output "worker_dev_url" {
-  value = "https://${cloudflare_workers_script.dropbox_clone.script_name}.${var.account_subdomain}.workers.dev"
+  value       = "https://${cloudflare_workers_script.dropbox_clone.script_name}.${var.account_subdomain}.workers.dev"
   description = "URL to access the deployed Worker via workers.dev"
 }

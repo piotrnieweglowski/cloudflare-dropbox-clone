@@ -1,0 +1,1 @@
+This is just a placeholder needed for keeping empty 'downloads' folder in git project.

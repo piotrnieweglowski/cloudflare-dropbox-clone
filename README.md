@@ -58,6 +58,7 @@ source .env
 ```bash
 cd terraform
 terraform init
+terraform plan
 terraform apply
 ```
 
@@ -79,6 +80,16 @@ After apply, you'll get:
 
 > You’ll need these for your Wrangler config.
 
+### 5. Cleaning up the infrastructure
+
+After experimenting with the project, you may want to remove the provisioned infrastructure:
+
+```bash
+terraform destroy
+```
+
+⚠️ Warning: This action is irreversible. All data stored in D1 will be permanently lost.
+If your R2 bucket is not empty, the operation will fail. In that case, everything except the R2 bucket will be destroyed.
 ---
 
 ## 💡 Wrangler: Worker Logic + Deployment
