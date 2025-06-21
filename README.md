@@ -90,6 +90,7 @@ terraform destroy
 
 ⚠️ Warning: This action is irreversible. All data stored in D1 will be permanently lost.
 If your R2 bucket is not empty, the operation will fail. In that case, everything except the R2 bucket will be destroyed.
+
 ---
 
 ## 💡 Wrangler: Worker Logic + Deployment
